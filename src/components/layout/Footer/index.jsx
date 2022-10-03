@@ -1,11 +1,12 @@
 import React from 'react';
+import "./footer.style.css";
 
-const Footer = () => {
+const Index = () => {
     return (
-        <footer>
+        <footer className="footer">
             Footer
         </footer>
     );
 };
 
-export default Footer;
+export default Index;
