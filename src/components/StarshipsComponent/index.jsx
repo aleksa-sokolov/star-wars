@@ -8,6 +8,7 @@ const StarshipsComponent = () => {
 
     const getStarships = async (url) => {
         const res = await getApiStarWars(url);
+        console.log(res);
         const getStarship = res.results.map(({name, url}) => {
             return {
                 name, url
@@ -18,7 +19,7 @@ const StarshipsComponent = () => {
 
 
     useEffect(() => {
-        getStarships("https://swapi.dev/api/starships");
+        getStarships("https://swapi.dev/api/starships/?page=1");
     }, []);
 
 

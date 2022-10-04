@@ -1,6 +1,6 @@
 import {combineReducers} from "@reduxjs/toolkit";
-import {swappiSlice} from "./slice/swappiSlice";
+import swappi from "./slice/swappiSlice";
 
 export default combineReducers({
-    swappiSlice
+    swappi
 });

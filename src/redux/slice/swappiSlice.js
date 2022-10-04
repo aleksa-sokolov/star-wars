@@ -4,7 +4,7 @@ import reject from "lodash/reject"
 export const swappiSlice = createSlice({
     name: "swappi",
     initialState: {
-        favoriteCollection: [1,2,3],
+        favoriteCollection: [],
     },
     reducers: {
         addFavoritePeople: (state, action) => {

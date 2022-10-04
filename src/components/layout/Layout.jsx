@@ -6,12 +6,13 @@ import "../../App.style.css";
 
 const Layout = () => {
     return (<>
+        <div className="container">
             <Header/>
-            <div className="container">
-                <Outlet/>
-            </div>
+            <Outlet/>
             <Footer/>
-        </>);
+        </div>
+
+    </>);
 };
 
 export default Layout;
