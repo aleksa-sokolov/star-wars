@@ -13,7 +13,6 @@ const PeoplesComponent = () => {
         return url.replace("https://swapi.dev/api/people", "").replace(/[^0-9]/g, "");
     }
 
-    console.log(page);
 
     function getNextPage(count) {
         if (page === 10) {
@@ -39,6 +38,7 @@ const PeoplesComponent = () => {
                     name, url
                 }
             });
+            localStorage.setItem('page', "1");
             setPeoples(getPeople);
         }
 

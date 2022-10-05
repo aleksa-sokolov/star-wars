@@ -12,7 +12,6 @@ const FavoriteComponent = () => {
     }
 
 
-
     function deleteFavoritePeople(people) {
         dispatch(removeFavoritePeople(people));
     }
@@ -25,13 +24,14 @@ const FavoriteComponent = () => {
                 const urlImage = `https://starwars-visualguide.com/assets/img/characters/${id}` + ".jpg";
                 return (
                     <ul className="favorite__lists">
-                        <li className="favorite__lists-list"><img src={urlImage}   alt=""/></li>
+                        <li className="favorite__lists-list"><img src={urlImage} alt=""/></li>
                         <li className="favorite__lists-list"><span>Name:</span>{people.name}</li>
-                        <li onClick={() => deleteFavoritePeople(people)}  className="favorite__lists-list"><span className="favorite__lists-list-btn">&#215;</span>
+                        <li onClick={() => deleteFavoritePeople(people)} className="favorite__lists-list"><span
+                            className="favorite__lists-list-btn">&#215;</span>
                         </li>
                     </ul>
                 )
-            }): <div>fgfh</div>}
+            }) : <div>fgfh</div>}
         </div>
     );
 };

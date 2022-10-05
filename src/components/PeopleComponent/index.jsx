@@ -7,9 +7,7 @@ import {addFavoritePeople, removeFavoritePeople} from "../../redux/slice/swappiS
 const PeopleComponent = ({people, img, urlPeople}) => {
     const {birth_year, hair_color, height, mass, name, gender, skin_color} = people;
     const dispatch = useDispatch();
-
-    const firstCoinState = useSelector((state) => state.swappi.favoriteCollection);
-    console.log(firstCoinState);
+    const favoriteCollection = useSelector((state) => state.swappi.favoriteCollection);
 
 
     function checkFavoritePeople(arr, obj) {
@@ -28,8 +26,9 @@ const PeopleComponent = ({people, img, urlPeople}) => {
 
 
     function handleFavoritePeople(people) {
-        localStorage.setItem("favorite",dispatch(addFavoritePeople(people)));
+        dispatch(addFavoritePeople(people));
     }
+
 
     return (<div className="people">
         <Link className="people__closes" to="/characters">&#215;</Link>
@@ -44,7 +43,7 @@ const PeopleComponent = ({people, img, urlPeople}) => {
                 <li className="people__list"><span>Hair Color: </span>{hair_color}</li>
                 <li className="people__list"><span>Skin Color: </span>{skin_color}</li>
                 <li className="people__list">
-                    {checkFavoritePeople(firstCoinState, people) ?
+                    {checkFavoritePeople(favoriteCollection, people) ?
                         <button onClick={() => deleteFavoritePeople(people)}>Удалить из избранного</button> :
                         <button onClick={() => handleFavoritePeople(people)}>Добавить в избранное</button>}
                 </li>
