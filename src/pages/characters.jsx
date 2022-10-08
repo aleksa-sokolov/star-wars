@@ -1,12 +1,13 @@
 import React from 'react';
-import PeoplesComponent from "../components/PeoplesComponent";
+import PeoplesComponent from '../components/PeoplesComponent';
 
 const Characters = () => {
-    return (
-        <>
-            <PeoplesComponent/>
-        </>
-    );
+  console.log('characters');
+  return (
+    <>
+      <PeoplesComponent />
+    </>
+  );
 };
 
 export default Characters;
