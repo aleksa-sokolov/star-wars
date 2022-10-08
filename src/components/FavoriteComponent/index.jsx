@@ -2,10 +2,12 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import "./favorite.style.css";
 import {removeFavoritePeople} from "../../redux/slice/swappiSlice";
+import img from "../../images/empty.png";
 
 const FavoriteComponent = () => {
     const dispatch = useDispatch();
     const people = useSelector(state => state.swappi.favoriteCollection);
+    console.log(people);
 
     function getIdICharacters(url) {
         return url.replace("https://swapi.dev/api/people", "").replace(/[^0-9]/g, "");
@@ -19,7 +21,7 @@ const FavoriteComponent = () => {
 
     return (
         <div className="favoritePeople">
-            {people ? people.map((people) => {
+            {!people.length <= 0 ? (people.map((people) => {
                 const id = getIdICharacters(people.url);
                 const urlImage = `https://starwars-visualguide.com/assets/img/characters/${id}` + ".jpg";
                 return (
@@ -31,7 +33,10 @@ const FavoriteComponent = () => {
                         </li>
                     </ul>
                 )
-            }) : <div>fgfh</div>}
+            })) : (<div className="favorite__empty">
+                <p className="favorite__empty-title">You haven't added your favorite character to favorites yet</p>
+                <img className="favorite__empty-img" src={img} alt=""/>
+            </div>)}
         </div>
     );
 };

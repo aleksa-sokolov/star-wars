@@ -14,9 +14,11 @@
     top: 0;
     right: 15px;
     cursor: pointer;
+    z-index: 10;
 }
 
 .people__wrap {
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -24,7 +26,6 @@
 .people__img {
     width: 100%;
     max-width: 300px;
-
 }
 
 .people__lists {
@@ -59,6 +60,58 @@
     background-color: var(--yellow-colorHover);
 }
 
-/*.people__list button.active {*/
-/*    pointer-events: none;*/
-/*}*/
+
+@media (min-width: 480px) and (max-width: 820px) {
+    .people__img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .people__list {
+        margin-bottom: 9px;
+        font-size: 14px;
+        color: #e3e3e3;
+    }
+
+    .people__list button {
+        margin: 0;
+    }
+
+    .people__closes {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .people {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .people__wrap {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .people__img {
+        width: 100%;
+    }
+
+    .people__lists {
+        padding: 0;
+    }
+
+    .people__list {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #e3e3e3;
+    }
+
+    .people__list button {
+        margin: 10px 0 0;
+    }
+
+    .people__closes {
+        font-size: 30px;
+    }
+}

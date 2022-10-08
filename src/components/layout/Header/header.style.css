@@ -26,6 +26,7 @@
 
 .nav__lists-list {
     margin-left: 35px;
+    position: relative;
 }
 
 .nav__lists-list:first-child {
@@ -77,15 +78,70 @@
     width: 300px;
     height: 25px;
     padding-left: 10px;
-    border: none;
     outline: none;
-    border-radius: 20px;
+    border-radius: 10px;
+    border: none;
     background-color: var(--white-color);
 }
 
 
 .nav__lists-list input:focus {
     border: none;
+}
+
+
+.nav__lists-list button {
+    width: 100px;
+    height: 27px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--yellow-color);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.nav__lists-list button:hover {
+    background-color: var(--yellow-colorHover);
+}
+
+.nav__search {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    position: absolute;
+    top: 30px;
+    z-index: 100;
+}
+
+.nav__search.hidden {
+    display: none;
+}
+
+.nav__search li {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.nav__search li:last-child {
+    padding-bottom: 0;
+}
+
+.nav__search li a {
+    color: var(--black-color);
+
 }
 
 

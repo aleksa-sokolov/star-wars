@@ -85,3 +85,67 @@
 .slides__dots span.active {
     background-color: var(--yellow-color);
 }
+
+@media (min-width: 480px) and (max-width: 820px) {
+    .slides {
+        width: 70%;
+        height: auto;
+        margin: 20px auto 20px;
+        position: relative;
+    }
+
+    .slides__dots {
+        width: 80%;
+        margin: 18px auto 30px;
+    }
+
+    .slides__button-prev, .slides__button-next {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        color: var(--yellow-color);
+        transition: .5s;
+    }
+
+    .slides__button-next {
+        margin-right: -60px;
+    }
+
+    .slides__button-prev {
+        margin-left: -50px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .slides {
+        width: 67%;
+        height: auto;
+        margin: 20px auto 20px;
+        position: relative;
+    }
+
+    .slides__dots {
+        width: 90%;
+        margin: 18px auto 30px;
+    }
+
+    .slides__buttons {
+        top: 45%;
+    }
+
+    .slides__button-prev, .slides__button-next {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        color: var(--yellow-color);
+        transition: .5s;
+    }
+
+    .slides__button-next {
+        margin-right: -50px;
+    }
+
+    .slides__button-prev {
+        margin-left: -40px;
+    }
+}

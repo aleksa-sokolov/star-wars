@@ -67,3 +67,23 @@
 .character__btn:hover {
     background-color: var(--yellow-colorHover);
 }
+
+@media (min-width: 480px) and (max-width: 820px) {
+    .character {
+        justify-content: center;
+    }
+
+    .character a {
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .character {
+        justify-content: center;
+    }
+
+    .character a {
+        padding: 0 10px;
+    }
+}

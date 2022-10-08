@@ -14,6 +14,8 @@ const PeoplesComponent = () => {
     }
 
 
+    console.log(peoples);
+
     function getNextPage(count) {
         if (page === 10) {
             setPage(count -= 1);

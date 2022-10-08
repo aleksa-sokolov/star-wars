@@ -1,4 +1,5 @@
 .favoritePeople {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -7,14 +8,14 @@
 .favorite__lists {
     width: 230px;
     max-width: 300px;
-    margin-bottom: 40px;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-bottom: 0;
     padding-left: 0;
     list-style-type: none;
     position: relative;
 }
 
-.favorite__lists-list  {
+.favorite__lists-list {
 
 }
 
@@ -50,11 +51,41 @@
     border-radius: 50%;
 }
 
-.favorite__lists-list span {
+.favorite__lists-list:last-child span {
 
 }
 
 .favorite__lists-list-btn {
-
+    position: absolute;
+    top: -2px;
+    right: 5px;
 }
 
+.favorite__empty {
+    width: 100%;
+    position: relative;
+}
+
+.favorite__empty-title {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.favorite__empty-img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .favoritePeople {
+        justify-content: center;
+    }
+}
