@@ -1,12 +1,12 @@
 import React from 'react';
-import VehiclesComponent from "../components/VehiclesComponent";
+import VehiclesComponent from '../components/VehiclesComponent';
 
 const Vehicles = () => {
-    return (
-        <>
-            <VehiclesComponent/>
-        </>
-    );
+  return (
+    <>
+      <VehiclesComponent />
+    </>
+  );
 };
 
 export default Vehicles;

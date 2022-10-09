@@ -1,12 +1,12 @@
 import React from 'react';
-import StarshipsComponent from "../components/StarshipsComponent";
+import StarshipsComponent from '../components/StarshipsComponent';
 
 const Starships = () => {
-    return (
-        <>
-            <StarshipsComponent/>
-        </>
-    );
+  return (
+    <>
+      <StarshipsComponent />
+    </>
+  );
 };
 
 export default Starships;

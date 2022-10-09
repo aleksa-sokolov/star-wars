@@ -20,7 +20,7 @@ const PeopleComponent = ({ people, img }) => {
     dispatch(removeFavoritePeople(people));
   }
 
-  function handleFavoritePeople(people) {
+  function addToFavoriteCollection(people) {
     dispatch(addFavoritePeople(people));
   }
 
@@ -66,7 +66,7 @@ const PeopleComponent = ({ people, img }) => {
                 Удалить из избранного
               </button>
             ) : (
-              <button onClick={() => handleFavoritePeople(people)}>
+              <button onClick={() => addToFavoriteCollection(people)}>
                 Добавить в избранное
               </button>
             )}

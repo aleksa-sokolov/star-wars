@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './slider.style.css';
-import slide1 from '../../images/slide-1.jpg';
-import slide2 from '../../images/slide-2.jpg';
-import slide3 from '../../images/slide-3.webp';
-import slide4 from '../../images/slide-4.jpg';
-import slide5 from '../../images/slide-5.jpg';
-import slide6 from '../../images/slide-6.jpg';
-import slide7 from '../../images/slide-7.jpg';
-import slide8 from '../../images/slide-8.jpg';
-import slide9 from '../../images/slide-9.jpg';
-import slide10 from '../../images/slide-10.jpg';
+import slide1 from '../../../images/slide-1.jpg';
+import slide2 from '../../../images/slide-2.jpg';
+import slide3 from '../../../images/slide-3.webp';
+import slide4 from '../../../images/slide-4.jpg';
+import slide5 from '../../../images/slide-5.jpg';
+import slide6 from '../../../images/slide-6.jpg';
+import slide7 from '../../../images/slide-7.jpg';
+import slide8 from '../../../images/slide-8.jpg';
+import slide9 from '../../../images/slide-9.jpg';
+import slide10 from '../../../images/slide-10.jpg';
 
 const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(0);

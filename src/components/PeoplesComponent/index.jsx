@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { getApiStarWars } from '../../utils/getApiStarWars';
 import './peoplecomponent.style.css';
 import { Link } from 'react-router-dom';
-import SkeletonCard from '../Skeleton/SkeletonCards';
-import { getIdICharacters } from '../../utils/additionalUtils';
+import SkeletonCard from '../elements/Skeleton/SkeletonCard';
+import { getIdICharacters, getDataFromApi } from '../../utils/additionalUtils';
 
 const PeoplesComponent = () => {
   let urlImage = 'https://starwars-visualguide.com/assets/img/characters/';
@@ -27,22 +27,18 @@ const PeoplesComponent = () => {
   }
 
   useEffect(() => {
-    const getPeoples = async (url) => {
-      const res = await getApiStarWars(url);
-      console.log(res);
-      const getPeople = res.results.map(({ name, url }) => {
+    getDataFromApi(
+      `https://swapi.dev/api/people/?page=${localStorage.getItem('page')}`
+    ).then((res) => {
+      const collectionOfPeoples = res.results.map(({ name, url }) => {
         return {
           name,
           url,
         };
       });
       localStorage.setItem('page', '1');
-      setPeoples(getPeople);
-    };
-
-    getPeoples(
-      `https://swapi.dev/api/people/?page=${localStorage.getItem('page')}`
-    );
+      setPeoples(collectionOfPeoples);
+    });
   }, [page]);
 
   return (

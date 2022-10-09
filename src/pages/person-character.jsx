@@ -4,7 +4,6 @@ import { getApiStarWars } from '../utils/getApiStarWars';
 import PeopleComponent from '../components/PeopleComponent';
 
 const PersonCharacter = () => {
-  console.log('person');
   const [people, setPeople] = useState([]);
   const idCharacter = useParams();
   const urlCharacter = `https://swapi.dev/api/people/${idCharacter.id}/`;
