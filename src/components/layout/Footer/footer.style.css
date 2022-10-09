@@ -1,0 +1,11 @@
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer__title {
+    text-align: center;
+}
