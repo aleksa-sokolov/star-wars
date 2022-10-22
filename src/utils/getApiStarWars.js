@@ -1,5 +1,3 @@
-import axios from "axios";
-
 export async function getApiStarWars(url) {
   try {
     const res = await fetch(url);

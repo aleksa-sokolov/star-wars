@@ -48,7 +48,7 @@
 .character__buttons {
     display: flex;
     justify-content: center;
-    margin: 30px 0 60px;
+    margin: 30px 0 0;
 }
 
 .character__btn {
@@ -76,6 +76,8 @@
     .character a {
         padding: 0 10px;
     }
+
+
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

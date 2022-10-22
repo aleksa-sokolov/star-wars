@@ -95,6 +95,7 @@
 
     .people__img {
         width: 100%;
+        max-width: none;
     }
 
     .people__lists {

@@ -1,17 +1,24 @@
 .footer {
-<<<<<<< HEAD
     width: 100%;
-=======
->>>>>>> 7ece567abef6290a5e81ff9bd68a8e3579d4f243
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-<<<<<<< HEAD
+
 }
 
 .footer__title {
     text-align: center;
-=======
->>>>>>> 7ece567abef6290a5e81ff9bd68a8e3579d4f243
+}
+
+@media (min-width: 320px) and (max-width: 1164px) {
+    .footer {
+        position: relative;
+    }
+
+    .footer__title {
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+    }
 }
