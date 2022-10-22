@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./category.style.css";
-import imgFilms from "../../images/films.jpg";
-import imgCharacters from "../../images/characters.jpg";
+import imgFilms from "../../../images/films.jpg";
+import imgCharacters from "../../../images/characters.jpg";
 
 const Category = () => {
   return (
