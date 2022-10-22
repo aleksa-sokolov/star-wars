@@ -5,12 +5,11 @@ import imgFilms from "../../images/films.jpg";
 import imgCharacters from "../../images/characters.jpg";
 
 const Category = () => {
-  console.log("category");
   return (
     <div className="categories">
       <Link to="/films" className="category">
         <p className="category__title">Films</p>
-        <img src={imgFilms} alt="" className="category__img" />
+        <img src={imgFilms} alt="Films" className="category__img" />
       </Link>
       <Link to="/characters" className="category">
         <p className="category__title">Characters</p>

@@ -1,3 +1,4 @@
+import { getApiStarWars } from './getApiStarWars';
 function filtered(array, value) {
   if (!value) {
     return [];
@@ -25,4 +26,18 @@ function checkFavoritePeople(arr, obj) {
     return true;
   }
 }
-export { filtered, getIdICharacters, checkFavoritePeople };
+function getIdCharactersFromFilms(url) {
+  return url.replace('https://swapi.dev/api/films', '').replace(/[^0-9]/g, '');
+}
+
+const getDataFromApi = async (url) => {
+  const res = await getApiStarWars(url);
+  return res;
+};
+export {
+  filtered,
+  getIdICharacters,
+  checkFavoritePeople,
+  getIdCharactersFromFilms,
+  getDataFromApi,
+};

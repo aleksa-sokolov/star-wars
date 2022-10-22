@@ -1,13 +1,12 @@
 import React from 'react';
-import FilmsComponent from "../components/FilmsComponent";
-
+import FilmsComponent from '../components/FilmsComponent';
 
 const Films = () => {
-    return (
-        <>
-            <FilmsComponent/>
-        </>
-    );
+  return (
+    <>
+      <FilmsComponent />
+    </>
+  );
 };
 
 export default Films;

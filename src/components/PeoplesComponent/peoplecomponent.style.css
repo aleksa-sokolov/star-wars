@@ -1,15 +1,7 @@
-.characters {
-
-}
-
 .characters__title {
     font-size: 22px;
     font-weight: 700;
     letter-spacing: 0.02em;
-}
-
-.characters__wrapper {
-
 }
 
 .character {
@@ -61,7 +53,7 @@
     color: var(--black-color);
     letter-spacing: 0.01em;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .character__btn:hover {
@@ -76,8 +68,6 @@
     .character a {
         padding: 0 10px;
     }
-
-
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
